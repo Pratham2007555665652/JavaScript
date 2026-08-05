@@ -27,7 +27,7 @@ console.log(real_Another_Array);
 let IsArray =  Array.isArray("rohan");
 console.log(IsArray);
 
-// (4) convert any datatype input to Array
+// (4) convert string input to Array
 let from =  Array.from("rohan");
 console.log(from);
 
