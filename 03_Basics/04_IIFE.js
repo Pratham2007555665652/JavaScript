@@ -4,7 +4,7 @@
   //named IIFE
   console.log("DB CONNECTED");
 })();
-//add ; to end a function context
+//; to end a function context
 
 ((name) => {
   //unnamed IIFE
