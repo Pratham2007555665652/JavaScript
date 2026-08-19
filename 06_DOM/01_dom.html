@@ -4,14 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM Basics</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #fff;
+        }
+    </style>
+
+
 </head>
 
 <body>
     <div class="bg-black">
-        <h1 class="Heading">DOM Learning</h1>
+        <h1 id="title" class="Heading">DOM Learning <span style="display: none;">test text</span> </h1>
+        <h2>Lorem, ipsum dolor.</h2>
+        <h2>Lorem, ipsum dolor.</h2>
+        <h2>Lorem, ipsum dolor.</h2>
         <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
 
     </div>
+
+    <script>
+        //    const byId = document.getElementById('title');
+        //    console.log(byId);
+
+        // const giveId = document.getElementById('title').id;
+        // console.log(giveId);
+
+        // const giveClass = document.getElementById('title').className;
+        // console.log(giveClass);
+
+        // const getAttribute = document.getElementById('title').getAttribute('class');
+        // console.log(getAttribute);
+
+        // const setAttribute = document.getElementById('title').setAttribute('class', 'test');
+        // console.log(setAttribute);
+
+        //add style
+        const title = document.getElementById('title');
+        const addStyle = title.style.backgroundColor = 'green';
+        title.style.padding = '15px';
+        title.style.borderRadius = '15px';
+
+        //diffrence between innertext , textcontent , innerHTML
+        // console.log(title.innerText);  //print DOM Learning
+        // console.log(title.textContent); //print DOM Learning test text
+        // console.log(title.innerHTML); //print DOM Learning <span style="display: none;">test text</span> 
+
+
+        const tagSelector = document.querySelector('h2')
+        // console.log(tagSelector);
+
+        const idtitle = document.querySelector('#title')
+        // console.log(idtitle);
+
+        const inputpass = document.querySelector('input[type="password"]')
+        // console.log(inputpass);
+
+        const myUl = document.querySelector('ul');
+        const selectLi = document.querySelector('li')
+        // console.log(myUl);
+        // console.log(selectLi);
+
+        selectLi.style.backgroundColor = 'green'
+        selectLi.style.padding = '10px'
+
+        selectLi.innerText = 'five';
+
+        //querySelectorAll
+
+        const allLi = document.querySelectorAll('li');
+        console.log(allLi);
+
+        //IMP
+        allLi[1].style.color = 'green'
+
+        allLi.forEach((li) => {
+            li.style.backgroundColor = 'green';
+        })
+
+        const getbyClassName = document.getElementsByClassName('list-item')
+
+        //convert HTMLCollection to Array
+        const HTMLcollectionToArray = Array.from(getbyClassName)
+        console.log(HTMLcollectionToArray);
+
+        HTMLcollectionToArray.forEach((li) => {
+            li.style.color = "red";
+        })
+        //
+
+
+
+
+    </script>
 </body>
 
 </html>
